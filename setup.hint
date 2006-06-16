@@ -1,0 +1,7 @@
+category: Video
+requires: cygwin
+sdesc: "MPEG video manipulation library and utilities (runtime)"
+ldesc: "Libmpeg3 supports advanced editing and manipulation of MPEG
+streams. It was started in Fall of 1999 as the first MPEG library with
+frame accurate seeking, MPEG-2 decoding, AC3/A52 decoding all integrated
+behind a single interface."

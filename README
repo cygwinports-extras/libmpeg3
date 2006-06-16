@@ -1,0 +1,80 @@
+libmpeg3
+------------------------------------------
+Libmpeg3 supports advanced editing and manipulation of MPEG streams. It
+was started in Fall of 1999 as the first MPEG library with frame
+accurate seeking, MPEG-2 decoding, AC3/A52 decoding all integrated
+behind a single interface.
+
+Runtime requirements:
+  cygwin-1.5.19-4
+
+Build requirements:
+  cygwin-1.5.19-4
+  binutils-20050610-1
+  cygport-0.1.93-1
+  gcc-core-3.4.4-1
+  make-3.80-1
+
+Canonical website:
+  http://heroinewarrior.com/libmpeg3.php3
+
+Canonical download:
+  http://prdownloads.sourceforge.net/heroines/
+
+-------------------------------------------
+
+Build instructions:
+  unpack libmpeg3-1.6-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./libmpeg3-1.6-X.cygport all
+
+This will create:
+  /usr/src/libmpeg3-1.6-X-src.tar.bz2
+  /usr/src/libmpeg3-1.6-X.tar.bz2
+  /usr/src/libmpeg3-devel-1.6-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the main package:
+
+  /usr/bin/mpeg3cat.exe
+  /usr/bin/mpeg3dump.exe
+  /usr/bin/mpeg3peek.exe
+  /usr/bin/mpeg3toc.exe
+  /usr/share/doc/Cygwin/libmpeg3-1.6.README
+  /usr/share/doc/libmpeg3-1.6/COPYING
+
+Files included in the devel package:
+
+  /usr/include/libmpeg3/audio/ac3.h
+  /usr/include/libmpeg3/audio/mpeg3audio.h
+  /usr/include/libmpeg3/bitstream.h
+  /usr/include/libmpeg3/libmpeg3.h
+  /usr/include/libmpeg3/mpeg3atrack.h
+  /usr/include/libmpeg3/mpeg3css.h
+  /usr/include/libmpeg3/mpeg3demux.h
+  /usr/include/libmpeg3/mpeg3io.h
+  /usr/include/libmpeg3/mpeg3private.h
+  /usr/include/libmpeg3/mpeg3private.inc
+  /usr/include/libmpeg3/mpeg3protos.h
+  /usr/include/libmpeg3/mpeg3title.h
+  /usr/include/libmpeg3/mpeg3vtrack.h
+  /usr/include/libmpeg3/timecode.h
+  /usr/include/libmpeg3/video/idct.h
+  /usr/include/libmpeg3/video/mpeg3video.h
+  /usr/include/libmpeg3/video/slice.h
+  /usr/lib/libmpeg3.a
+
+------------------
+
+Port Notes:
+
+----- version 1.6-1 -----
+Initial release for Cygwin.
+Includes several patches from Gentoo Linux media-libs/libmpeg3-1.5.2-r3.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
