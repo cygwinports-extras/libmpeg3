@@ -1,7 +1,7 @@
 category: Video
-requires: cygwin libmpeg3_1 liba52-devel
+requires: cygwin liba52_0
 external-source: libmpeg3
-sdesc: "MPEG video manipulation library (development)"
+sdesc: "MPEG video manipulation library (runtime)"
 ldesc: "Libmpeg3 supports advanced editing and manipulation of MPEG
 streams. It was started in Fall of 1999 as the first MPEG library with
 frame accurate seeking, MPEG-2 decoding, AC3/A52 decoding all integrated

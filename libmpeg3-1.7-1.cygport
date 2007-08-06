@@ -1,0 +1,31 @@
+DESCRIPTION="MPEG stream manipulation library"
+HOMEPAGE="http://heroinewarrior.com/libmpeg3.php3"
+SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2"
+#         mirror://gentoo/${P}-gentoo.tar.bz2"
+PATCH_URI="
+	${P}-a52.patch
+	${P}-all_gcc4.patch
+	${P}-all_pthread.patch
+	${P}-mpeg3split.patch
+	gentoo-p2.patch
+"
+
+abi=1
+PKG_NAMES="${PN} ${PN}_${abi} ${PN}-devel"
+PKG_HINTS='setup dll devel'
+PKG_CONTENTS[0]='usr/bin/*.exe usr/share/'
+PKG_CONTENTS[1]="usr/bin/cygmpeg3-${abi}.dll"
+PKG_CONTENTS[2]='usr/include/ usr/lib/'
+
+DIFF_EXCLUDES="Makefile"
+
+src_compile() {
+	cd ${S}
+	cygautoreconf
+	cd ${B}
+	ln -sf ${S} ${B}/libmpeg3
+	cygconf
+	cygmake CPPFLAGS='-I$(top_builddir)'
+}
+
+HTMLDOCS="docs/index.html"
