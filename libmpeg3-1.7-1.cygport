@@ -10,7 +10,8 @@ PATCH_URI="
 	gentoo-p2.patch
 "
 
-abi=1
+# 1.7 is NOT compatible with 1.5.4
+abi=2
 PKG_NAMES="${PN} ${PN}_${abi} ${PN}-devel"
 PKG_HINTS='setup dll devel'
 PKG_CONTENTS[0]='usr/bin/*.exe usr/share/'

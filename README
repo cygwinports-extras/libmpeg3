@@ -11,10 +11,15 @@ Runtime requirements:
 
 Build requirements:
   cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.10-1.10-1
   binutils-20060817-1
   cygport-0.3.5-1
+  gawk-3.1.5-4
   gcc-core-3.4.4-3
-  make-3.80-1
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  sed-4.1.5-2
 
 Canonical website:
   http://heroinewarrior.com/libmpeg3.php3
@@ -25,17 +30,17 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libmpeg3-1.5.4-X-src.tar.bz2
+  unpack libmpeg3-1.7-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libmpeg3-1.5.4-X.cygport all
+  cygport ./libmpeg3-1.7-X.cygport all
 
 This will create:
-  /usr/src/libmpeg3-1.5.4-X-src.tar.bz2
-  /usr/src/libmpeg3-1.5.4-X.tar.bz2
-  /usr/src/libmpeg3_1-1.5.4-X.tar.bz2
-  /usr/src/libmpeg3-devel-1.5.4-X.tar.bz2
+  /usr/src/libmpeg3-1.7-X-src.tar.bz2
+  /usr/src/libmpeg3-1.7-X.tar.bz2
+  /usr/src/libmpeg3_2-1.7-X.tar.bz2
+  /usr/src/libmpeg3-devel-1.7-X.tar.bz2
 
 -------------------------------------------
 
@@ -44,19 +49,23 @@ Files included in the binary packages:
 (libmpeg3)
   /usr/bin/mpeg3cat.exe
   /usr/bin/mpeg3dump.exe
+  /usr/bin/mpeg3peek.exe
   /usr/bin/mpeg3split.exe
   /usr/bin/mpeg3toc.exe
-  /usr/share/doc/Cygwin/libmpeg3-1.5.4.README
-  /usr/share/doc/libmpeg3-1.5.4/COPYING
-  /usr/share/doc/libmpeg3-1.5.4/html/index.html
+  /usr/share/doc/Cygwin/libmpeg3-1.7.README
+  /usr/share/doc/libmpeg3-1.7/COPYING
+  /usr/share/doc/libmpeg3-1.7/html/index.html
 
-(libmpeg3_1)
-  /usr/bin/cygmpeg3-1.dll
+(libmpeg3_2)
+  /usr/bin/cygmpeg3-2.dll
 
 (libmpeg3-devel)
   /usr/include/libmpeg3/audio/ac3.h
+  /usr/include/libmpeg3/audio/huffman.h
   /usr/include/libmpeg3/audio/mpeg3audio.h
+  /usr/include/libmpeg3/audio/tables.h
   /usr/include/libmpeg3/bitstream.h
+  /usr/include/libmpeg3/ifo.h
   /usr/include/libmpeg3/libmpeg3.h
   /usr/include/libmpeg3/mpeg3atrack.h
   /usr/include/libmpeg3/mpeg3css.h
@@ -69,14 +78,22 @@ Files included in the binary packages:
   /usr/include/libmpeg3/mpeg3vtrack.h
   /usr/include/libmpeg3/timecode.h
   /usr/include/libmpeg3/video/idct.h
+  /usr/include/libmpeg3/video/layerdata.h
   /usr/include/libmpeg3/video/mpeg3video.h
+  /usr/include/libmpeg3/video/mpeg3videoprotos.h
   /usr/include/libmpeg3/video/slice.h
+  /usr/include/libmpeg3/video/vlc.h
+  /usr/include/libmpeg3/workarounds.h
   /usr/lib/libmpeg3.a
   /usr/lib/libmpeg3.dll.a
+  /usr/lib/libmpeg3.la
 
 ------------------
 
 Port Notes:
+
+----- version 1.7-1 -----
+Version and ABI bump.
 
 ----- version 1.5.4-1 -----
 Reverted version for compatibility with gimp-gap and transcode.
