@@ -1,5 +1,5 @@
 category: Video
-requires: cygwin libmpeg3_2 liba52-devel
+requires: libmpeg3_2 liba52-devel
 external-source: libmpeg3
 sdesc: "MPEG video manipulation library (development)"
 ldesc: "Libmpeg3 supports advanced editing and manipulation of MPEG
